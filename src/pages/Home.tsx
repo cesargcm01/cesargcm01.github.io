@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin } from 'lucide-react';
-import profileImg from '../images/profile.jpg';
+import profileImg from '../images/profile.png';
 
 export default function Home() {
   return (
