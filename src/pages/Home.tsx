@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin } from 'lucide-react';
-import profileImg from '../images/profile.jpg';
 
 export default function Home() {
   return (
@@ -18,7 +17,10 @@ export default function Home() {
           <div className="w-40 h-40 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-600 p-1 mb-6 shadow-2xl shadow-blue-500/20">
             <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center overflow-hidden">
                <img
-                  src={profileImg}
+                  src="/images/profile.jpg"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=256&h=256";
+                  }}
                   alt="Cesar Castro"
                   className="w-full h-full object-cover"
                />
